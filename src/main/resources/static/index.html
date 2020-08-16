@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mancala Game</title>
+<link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/main.css" rel="stylesheet">
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+<script src="/app.js"></script>
+<style type="text/css">
+#myTable {
+	font-family: 'helvetica neue', helvetica, arial, 'lucida grande',
+		sans-serif;
+	border-collapse: collapse;
+}
+
+#myTable td {
+	border: solid 5px #bddbfa;
+	padding: 10px;
+	font-size: 12px;
+	text-align: center;
+}
+
+#myTable tr {
+	background-color: #80b5ea;
+	color: #ffffff;
+}
+</style>
+</head>
+<body>
+	<noscript>
+		<h2 style="color: #ff0000">Seems your browser doesn't support
+			Javascript! Websocket relies on Javascript being enabled. Please
+			enable Javascript and reload this page!</h2>
+	</noscript>
+	</br>
+	</br>
+	</br>
+	<div id="main-content" class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<form class="form-inline">
+					<div class="form-group">
+						<label for="connect">Connect to game server:</label>
+						<button id="connect" class="btn btn-default" type="submit">Connect</button>
+						<button id="disconnect" class="btn btn-default" type="submit"
+							disabled="disabled">Disconnect</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		</br>
+		</br>
+		<!--  --><div class="toshow" style="display:none"> 
+			<div class="row">
+				<div class="col-md-6">
+					<form class="form-inline">
+						<div class="form-group">
+							<button id="start" class="btn btn-default" type="submit">Start
+								New Game</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			</br>
+			</br>
+			</br>
+			<div class="row">
+				<table id="myTable" width="80%">
+					<tbody>
+						<tr>
+							<td colspan="2">Player 1</td>
+							<td colspan="6"><span id="gameStatus"></span> <span
+								id="winner"></span></td>
+							<td colspan="2">Player 2</td>
+						</tr>
+
+						<tr>
+							<td colspan="2" rowspan="2"><button id="6"
+									class="btn btn-default btn-circle">0</button></td>
+							<td><button id="5" type="button"
+									class="btn btn-primary custom" onclick="move(5)">0</button></td>
+							<td><button id="4" type="button"
+									class="btn btn-primary custom" onclick="move(4)">0</button></td>
+							<td><button id="3" type="button"
+									class="btn btn-primary custom" onclick="move(3)">0</button></td>
+							<td><button id="2" type="button"
+									class="btn btn-primary custom" onclick="move(2)">0</button></td>
+							<td><button id="1" type="button"
+									class="btn btn-primary custom" onclick="move(1)">0</button></td>
+							<td><button id="0" type="button"
+									class="btn btn-primary custom" onclick="move(0)">0</button></td>
+							<td colspan="2" rowspan="2"><button id="13"
+									class="btn btn-default btn-circle">0</button></td>
+						</tr>
+
+						<tr>
+							<td><button id="7" type="button"
+									class="btn btn-danger custom" onclick="move(7)">0</button></td>
+							<td><button id="8" type="button"
+									class="btn btn-danger custom" onclick="move(8)">0</button></td>
+							<td><button id="9" type="button"
+									class="btn btn-danger custom" onclick="move(9)">0</button></td>
+							<td><button id="10" type="button"
+									class="btn btn-danger custom" onclick="move(10)">0</button></td>
+							<td><button id="11" type="button"
+									class="btn btn-danger custom" onclick="move(11)">0</button></td>
+							<td><button id="12" type="button"
+									class="btn btn-danger custom" onclick="move(12)">0</button></td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+			</br>
+			</br>
+			</br>
+			<div class="row">
+				<div class="col-md-6">
+					<form class="form-inline">
+						<div class="form-group">
+							<label for="name">Chat:</label> <input type="text" id="content"
+								class="form-control" placeholder="Your message here...">
+						</div>
+						<button id="send" class="btn btn-default" type="submit">Send</button>
+					</form>
+				</div>
+				<div class="col-md-12">
+					<table id="conversation" class="table table-striped">
+						<thead>
+							<tr>
+								<th>Messages</th>
+							</tr>
+						</thead>
+						<tbody id="messages">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	<!--  --></div>
+</body>
+</html>
