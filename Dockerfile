@@ -17,6 +17,6 @@ ARG JAR_FILE=/code/target/*.jar
 COPY --from=build ${JAR_FILE} app.jar
 
 ##COPY --from=build /code/target/*.jar /
-
+EXPOSE 8080
 
 CMD ["java", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap", "-jar", "/app.jar"]
