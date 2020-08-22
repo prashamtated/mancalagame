@@ -15,15 +15,38 @@ import com.prasham.mancala.dto.GameStatus;
 import com.prasham.mancala.dto.Winner;
 
 /**
- * @author PRASHAMT
+ * @author PRASHAMT <p> 
+ * 
+ * 		   Rules Game Play The player who begins with the first move
+ *         picks up all the stones in any of his own six pits, and sows the
+ *         stones on to the right, one in each of the following pits, including
+ *         his own big pit. No stones are put in the opponents' big pit. If the
+ *         player's last stone lands in his own big pit, he gets another turn.
+ *         This can be repeated several times before it's the other player's
+ *         turn.
+ * 
+ *         Capturing Stones During the game the pits are emptied on both sides.
+ *         Always when the last stone lands in an own empty pit, the player
+ *         captures his own stone and all stones in the opposite pit (the other
+ *         player’s pit) and puts them in his own (big or little?) pit.
+ * 
+ * 
+ *         The Game Ends The game is over as soon as one of the sides runs out
+ *         of stones. The player who still has stones in his pits keeps them and
+ *         puts them in his big pit. The winner of the game is the player who
+ *         has the most stones in his big pit.
  *
  *
+ * 
  */
 @Service
 public class MancalaGame implements IBoardGame {
 	/**
-	 * Description of instance variables. <p>
-	 * player1: boolean that denotes whether player1 or player2 is allowed to click on a certain pile on the board. <p> 
+	 * Description of instance variables.
+	 * <p>
+	 * player1: boolean that denotes whether player1 or player2 is allowed to click
+	 * on a certain pile on the board.
+	 * <p>
 	 */
 	private boolean player1;
 	public LinkedList<Pile> piles;
@@ -73,13 +96,13 @@ public class MancalaGame implements IBoardGame {
 
 	public void moveAllStonesToMancala() {
 		int counter = 0;
-		if (isTopSideEmpty()) {
+		if (isBottomSideEmpty()) {
 			for (int i = 0; i < 6; i++) {
 				counter += piles.get(i).getNumStones();
 				piles.get(i).setNumStones(0);
 			}
 			piles.get(6).setNumStones(piles.get(6).getNumStones() + counter);
-		} else if (isBottomSideEmpty()) {
+		} else if (isTopSideEmpty()) {
 			for (int i = 7; i < 13; i++) {
 				counter += piles.get(i).getNumStones();
 				piles.get(i).setNumStones(0);
@@ -219,8 +242,8 @@ public class MancalaGame implements IBoardGame {
 
 	/**
 	 * During a move, checks whether the last stone to be distributed landed in an
-	 * empty pile with stones across from it. Will call findAcross() method in
-	 * order to find the Pile to check.
+	 * empty pile with stones across from it. Will call findAcross() method in order
+	 * to find the Pile to check.
 	 *
 	 * @param thisOne the this one
 	 * @return true, if is across full

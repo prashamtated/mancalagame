@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="com.prasham.mancala.dto.GameBoard" project="MancalaGame" 
+    file="/MancalaGame/src/main/java/com/prasham/mancala/dto/GameBoard.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="215" x="57" y="103"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="2" language="java" name="com.prasham.mancala.dto.GameStatus" project="MancalaGame" 
+    file="/MancalaGame/src/main/java/com/prasham/mancala/dto/GameStatus.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="156" x="312" y="103"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <interface id="3" language="java" name="com.prasham.mancala.service.IBoardGame" project="MancalaGame" 
+    file="/MancalaGame/src/main/java/com/prasham/mancala/service/IBoardGame.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="202" x="824" y="530"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <package id="4" language="java" name="com.prasham.mancala.dto" project="MancalaGame" 
+    file="/MancalaGame/src/main/java/com/prasham/mancala/dto" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="176" x="508" y="103"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="5" language="java" name="com.prasham.mancala.service" project="MancalaGame" 
+    file="/MancalaGame/src/main/java/com/prasham/mancala/service" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="200" x="966" y="103"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="6" language="java" name="com.prasham.mancala.service.MancalaGame" project="MancalaGame" 
+    file="/MancalaGame/src/main/java/com/prasham/mancala/service/MancalaGame.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="387" width="202" x="724" y="103"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="7" language="java" name="com.prasham.mancala.dto.Winner" project="MancalaGame" 
+    file="/MancalaGame/src/main/java/com/prasham/mancala/dto/Winner.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="121" x="1206" y="103"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="8" language="java" name="com.prasham.mancala.dto.Message" project="MancalaGame" 
+    file="/MancalaGame/src/main/java/com/prasham/mancala/dto/Message.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="121" x="1367" y="103"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="com.prasham.mancala.domain.Pile" project="MancalaGame" 
+    file="/MancalaGame/src/main/java/com/prasham/mancala/domain/Pile.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="279" width="159" x="625" y="530"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="com.prasham.mancala.domain.Stone" project="MancalaGame" 
+    file="/MancalaGame/src/main/java/com/prasham/mancala/domain/Stone.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="159" x="625" y="849"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="11">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="12" name="piles"/>      
+      <multiplicity id="13" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="14">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="15" name="stones"/>      
+      <multiplicity id="16" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="17">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
